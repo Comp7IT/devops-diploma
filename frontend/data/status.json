@@ -1,0 +1,8 @@
+{
+    "application": "DevOps Dashboard",
+    "version": "1.0.0",
+    "environment": "Development",
+    "server": "Nginx",
+    "status": "Online",
+    "lastDeployment": "2026-07-09 20:30"
+}

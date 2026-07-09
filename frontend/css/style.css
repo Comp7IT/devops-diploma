@@ -1,0 +1,28 @@
+body{
+    background:#f8f9fa;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+section{
+    padding:80px 0;
+}
+
+.card{
+
+    transition:0.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+footer{
+
+    margin-top:80px;
+
+}
