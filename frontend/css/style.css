@@ -1,28 +1,67 @@
-body{
-    background:#f8f9fa;
-    font-family:Arial, Helvetica, sans-serif;
+/* ===== Ogólne ustawienia ===== */
+
+body {
+    background-color: #eef2f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212529;
 }
 
-section{
-    padding:80px 0;
+/* ===== Pasek nawigacyjny ===== */
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.card{
+/* ===== Sekcje ===== */
 
-    transition:0.3s;
-
+section {
+    padding: 80px 0;
 }
 
-.card:hover{
+/* ===== Hero ===== */
 
-    transform:translateY(-10px);
-
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
-
+.hero {
+    padding: 120px 0;
 }
 
-footer{
+.hero h1 {
+    font-weight: bold;
+}
 
-    margin-top:80px;
+.hero p {
+    font-size: 22px;
+    color: #6c757d;
+}
 
+/* ===== Karty ===== */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Ikony ===== */
+
+.tech-icon {
+    font-size: 50px;
+    color: #0d6efd;
+    margin-bottom: 15px;
+}
+
+/* ===== Dashboard ===== */
+
+.list-group-item {
+    font-size: 18px;
+}
+
+/* ===== Stopka ===== */
+
+footer {
+    margin-top: 80px;
 }
