@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: dashboard
+  namespace: devops-dashboard
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: dashboard
+
+  template:
+    metadata:
+      labels:
+        app: dashboard
+
+    spec:
+      containers:
+      - name: dashboard
+        image: comp7it/devops-dashboard:latest
+
+        ports:
+        - containerPort: 80
