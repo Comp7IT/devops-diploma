@@ -1,0 +1,37 @@
+---
+- name: Configure Ubuntu server
+  hosts: servers
+  become: yes
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install packages
+      apt:
+        name:
+          - docker.io
+          - git
+          - curl
+        state: present
+
+    - name: Start Docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Pull dashboard image
+      command: docker pull comp7it/devops-dashboard:latest
+
+    - name: Remove old container
+      command: docker rm -f dashboard
+      ignore_errors: yes
+
+    - name: Run dashboard container
+      command: >
+        docker run -d
+        --name dashboard
+        -p 80:80
+        comp7it/devops-dashboard:latest

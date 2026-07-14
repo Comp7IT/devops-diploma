@@ -1,0 +1,2 @@
+[servers]
+ubuntu-vm ansible_host=192.168.56.101 ansible_user=matt
